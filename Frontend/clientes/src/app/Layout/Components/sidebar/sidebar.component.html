@@ -1,0 +1,44 @@
+<div [class]="'app-sidebar sidebar-shadow ' + (config$ | async)?.sidebarTheme"
+     (mouseenter)="onSidebarMouseEnter()"
+     (mouseleave)="onSidebarMouseLeave()">
+  <div class="app-header__logo">
+    <div class="logo-src">
+      <span class="logo-text">
+        <span class="logo-full fw-bold">Panel de Gestión Central</span>
+      </span>
+    </div>
+  </div>
+  <div class="app-sidebar-content">
+    <div class="app-sidebar-scroll">
+      <div class="sidebar-scrollbar">
+        <div class="v-sidebar-menu vsm-default">
+          <div class="vsm-list">
+            <div class="vsm-header">Módulos del Sistema</div>
+            
+            <div class="vsm-item">
+              <a routerLink="/clientes" routerLinkActive="active-item" class="vsm-link" (click)="onNavigate()">
+                <i class="vsm-icon pe-7s-users"></i>
+                <span class="vsm-title">Clientes</span>
+              </a>
+            </div>
+
+            <div class="vsm-item">
+              <a routerLink="/empleados" routerLinkActive="active-item" class="vsm-link" (click)="onNavigate()">
+                <i class="vsm-icon pe-7s-id"></i>
+                <span class="vsm-title">Empleados</span>
+              </a>
+            </div>
+
+            <div class="vsm-item">
+              <a routerLink="/servicios" routerLinkActive="active-item" class="vsm-link" (click)="onNavigate()">
+                <i class="vsm-icon pe-7s-config"></i>
+                <span class="vsm-title">Servicios</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+# ==========================================
+# REGLAS PARA C# / VISUAL STUDIO (BACKEND)
+# ==========================================
+# Archivos temporales y de usuario de VS
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Carpetas de compilación
+[Bb]in/
+[Oo]bj/
+
+# ==========================================
+# REGLAS PARA ANGULAR / NODE (FRONTEND)
+# ==========================================
+# Dependencias
+node_modules/
+.npm/
+
+# Carpetas de producción / compilación
+/dist/
+/.angular/
+
+# Varios
+.DS_Store
+Thumbs.db
+

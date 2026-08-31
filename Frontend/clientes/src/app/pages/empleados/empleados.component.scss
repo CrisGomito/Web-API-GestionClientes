@@ -1,0 +1,12 @@
+/* Estilos específicos para el componente */
+/* La plantilla ArchitectUI y Bootstrap se encargan del diseño principal */
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+// Opcional: Pequeña mejora visual para los botones de acción en las tablas
+.btn-sm {
+    margin-bottom: 0.2rem;
+}

@@ -1,0 +1,50 @@
+<app-page-title [heading]="heading" [subheading]="subheading" [icon]="icon"></app-page-title>
+
+<div class="main-card mb-3 card">
+  <div class="card-body">
+    <h5 class="card-title">{{ esEdicion ? 'Editar Empleado' : 'Registrar Empleado' }}</h5>
+    <form [formGroup]="formEmpleado" (ngSubmit)="guardar()">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Nombres</label>
+          <input type="text" class="form-control" formControlName="nombres" placeholder="Nombres">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Apellidos</label>
+          <input type="text" class="form-control" formControlName="apellidos" placeholder="Apellidos">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <label class="form-label">Cédula</label>
+          <input type="text" class="form-control" formControlName="cedula" placeholder="10 dígitos">
+        </div>
+        <div class="col-md-4 mb-3">
+          <label class="form-label">Cargo</label>
+          <input type="text" class="form-control" formControlName="cargo" placeholder="Ej: Desarrollador, Contador">
+        </div>
+        <div class="col-md-4 mb-3">
+          <label class="form-label">Sueldo</label>
+          <input type="number" step="0.01" class="form-control" formControlName="sueldo" placeholder="0.00">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" formControlName="email" placeholder="correo@empresa.com">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Teléfono</label>
+          <input type="text" class="form-control" formControlName="telefono" placeholder="09xxxxxxxx">
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-end gap-2">
+        <button type="button" class="btn btn-secondary me-2" (click)="cancelar()">Cancelar</button>
+        <button type="submit" class="btn btn-primary" [disabled]="formEmpleado.invalid">Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>
